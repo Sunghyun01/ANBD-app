@@ -22,7 +22,7 @@ export default class App extends Component {
 
   handleBackButton = ()=>{
     console.log(this.WEBVIEW_REF.current.startUrl);
-    if(this.WEBVIEW_REF.current.startUrl != "http://icemrn.dothome.co.kr/"){
+    if(this.WEBVIEW_REF.current.startUrl != "http://icemrn.dothome.co.kr/Q_task/"){
       this.WEBVIEW_REF.current.goBack()
     }else{
       if (this.exitApp == undefined || !this.exitApp) {
@@ -64,7 +64,7 @@ export default class App extends Component {
     var scripts = "setContent('<h1>Yay!</h1>');fireEvent('resize', '300')";
     return (
       <WebView
-        source={{ uri: "http://icemrn.dothome.co.kr" }}
+        source={{ uri: "http://icemrn.dothome.co.kr/Q_task/" }}
         ref={this.WEBVIEW_REF}
         injectedJavaScript= { scripts }
         scalesPageToFit={ false }
